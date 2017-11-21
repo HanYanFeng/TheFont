@@ -32,6 +32,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
         cell?.textLabel?.text = UIFont.familyNames[indexPath.row]
+        cell?.textLabel?.font = UIFont(name:(cell?.textLabel?.text)! , size: 17)
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
